@@ -1,0 +1,15 @@
+[package]
+name = "currycompose"
+version = "0.1.0"
+edition = "2021"
+license = "MIT"
+keywords = ["function", "fp", "currying", "compose", "composition"]
+categories = ["rust-patterns", "algorithms", "mathematics"]
+description = "A crate providing a trait for performing currying (and non-currying) function-composition in rust."
+repository = "https://github.com/sigurd4/currycompose"
+
+# See more keys and their definitions at https://doc.rust-lang.org/cargo/reference/manifest.html
+
+[dependencies]
+tupleops = {version = "0.1.1", features = ["concat"]}
+tuple_split = "0.1.1"
