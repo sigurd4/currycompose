@@ -8,3 +8,5 @@ A can be composed with B if A implements FnOnce and takes one or more argument, 
 - Composing (A, B) -> Y with (C) -> A then with (D) -> B yields (C, D) -> Y (currying twice).
 
 - While of course (A) -> Y composed with (B) -> A, yields (B) -> Y as expected (non-currying composition).
+
+Currying functions which implement FnMut or Fn will yield something also implementing FnMut/Fn if both operands do.

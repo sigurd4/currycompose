@@ -16,6 +16,10 @@
 //! 
 //! When currying, arguments of the function being curried with (f) is moved to the end of the argument-list
 //! 
+//! Both operands must implement FnOnce. If both implement FnMut or Fn, the resulting composition will also implement these traits.
+//! 
+//! g must also have one or more argument, where the first argument type equals the return type of f.
+//! 
 //! ```rust
 //! #![feature(generic_const_exprs)]
 //! 
@@ -81,6 +85,10 @@ use tuple_split::{TupleSplit, SplitInto};
 /// h(..., x) = g ∘ f = g(f(x), ...)
 /// 
 /// When currying, arguments of the function being curried with (f) is moved to the end of the argument-list
+/// 
+/// Both operands must implement FnOnce. If both implement FnMut or Fn, the resulting composition will also implement these traits.
+/// 
+/// g must also have one or more argument, where the first argument type equals the return type of f.
 /// 
 /// ```rust
 /// #![feature(generic_const_exprs)]
